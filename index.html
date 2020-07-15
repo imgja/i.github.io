@@ -8,4 +8,26 @@
    
   </body>
   
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
+<script src="http://malsup.github.com/jquery.form.js"></script> 
+<script>
+    function SavePhoto(e) 
+{
+    let user = { name:'john', age:34 };
+    let xhr = new XMLHttpRequest();
+    let formData = new FormData();
+    let photo = e.files[0];      
+    
+    formData.append("user", JSON.stringify(user));   
+    formData.append("photo", photo);
+    
+    xhr.onreadystatechange = state => { console.log(xhr.status); } // err handling
+    xhr.open("POST", 'test.png');    
+    xhr.send(formData);
+}
+
+</script>
+
+<input id="image-file" type="file" onchange="SavePhoto(this)" >
+  
 </html>
