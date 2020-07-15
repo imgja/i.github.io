@@ -1,0 +1,12 @@
+@font-face {
+ font-family: JFont;
+ src: url("../Font.ttf");
+}
+
+* {
+ font-family: JFont;
+}
+
+.error-container {
+  margin-top: 325px;
+}
