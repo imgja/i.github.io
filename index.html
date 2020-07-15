@@ -1,33 +1,32 @@
-<!DOCTYPE Html>
+<!DOCTYPE html>
 <html>
   <head>
-    <title> Хостинг картинок онлайн. </title>
+    <title> ❌ Упс, кажется, Вам сюда нельзя. </title>
+    <link rel="stylesheet" href="styles/homepage.css" />
+    <meta http-equiv="refresh" content="10; https://julh.ru/" />
+
+    <meta charset="UTF-8" />
+    <meta name="application-name" content="Reserved domain by Julheer." />
+    <meta name="author" content="Julheer" />
+    <meta name="generator" content="Julheer" />
+    <meta name="keywords" content="No keywords provided." />
+    <meta name="description" content="Зарезервированный проект для Julheer. Ошибка 405: доступ запрещён." />
   </head>
- <body>
-   <h1> Hello, world! </h1>
-   
+  <body>
+    <center>
+      <div class="error-container">
+        <div class="error-name">
+            <h1> ✈️ Упс, кажется, Вам сюда нельзя. </h1>
+        </div>
+        <div class="error-description">
+          <h2>
+            Вам не разрешено посещать данный<br>
+            веб-сайт, так-как он зарезервирован как<br>
+            <b>неактивный</b>. Вы будете автоматически перенеправлены на<br>
+            https://julh.ru/ через 10 секунд.
+          </h2>
+        </div>
+      </div>
+    </center>
   </body>
-  
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
-<script src="http://malsup.github.com/jquery.form.js"></script> 
-<script>
-    function SavePhoto(e) 
-{
-    let user = { name:'john', age:34 };
-    let xhr = new XMLHttpRequest();
-    let formData = new FormData();
-    let photo = e.files[0];      
-    
-    formData.append("user", JSON.stringify(user));   
-    formData.append("photo", photo);
-    
-    xhr.onreadystatechange = state => { console.log(xhr.status); } // err handling
-    xhr.open("POST", 'test.png');    
-    xhr.send(formData);
-}
-
-</script>
-
-<input id="image-file" type="file" onchange="SavePhoto(this)" >
-  
 </html>
